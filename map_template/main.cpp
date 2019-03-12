@@ -38,8 +38,7 @@ public:
         else wp->next = wn;
         return wn->value;
     }
-    //TODO
-    //add sorting by key and by value
+    
     void sortByKey() {
         Node<Key, Value>* tmp = head;
         Node<Key, Value>* tmp2 = head;
@@ -113,9 +112,9 @@ map<Key, Value>::~map() {
 
 int main() {
     map<string, string> map1;
-    map1["elo"] = "hi";
-    map1["eldo"] = "hello";
-    map1["eldoo"] = "helloo";
+    map1["foo"] = "bar";
+    map1["pies"] = "dog";
+    map1["kot"] = "cat";
     for (map<string,string>::iterator it = map1.begin(); it != map1.end(); ++it) {
         cout << it->key << " " << it->value << endl;
     }
